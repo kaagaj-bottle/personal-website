@@ -1,31 +1,45 @@
-const path = require("path");
+const path = require('path');
 
 const config = () => {
   return {
-    entry: "./src/index.js",
+    entry: './src/index.js',
     output: {
-      path: path.resolve(__dirname, "build"),
-      filename: "main.js",
+      path: path.resolve(__dirname, 'build'),
+      filename: 'main.js',
     },
     devServer: {
-      static: path.resolve(__dirname, "build"),
+      static: path.resolve(__dirname, 'build'),
       compress: true,
       port: 3000,
     },
-    devtool: "source-map",
+    devtool: 'source-map',
     module: {
       rules: [
         {
           test: /\.js$/,
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },
         {
           test: /\.css$/,
-          use: ["style-loader", "css-loader"],
+          use: ['style-loader', 'css-loader'],
         },
+        {
+          test:/\.(png|svg|jpg|jpeg|gif)$/i,
+          type:'asset/resource'
+        },{
+          test:/\.md$/,
+          use:[
+            {
+              loader:'html-loader',
+            },
+            {
+              loader:'markdown-loader'
+            }
+          ]
+        }
       ],
     },
   };
