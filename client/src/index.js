@@ -1,8 +1,17 @@
+// importing underlying packages
 import 'core-js/stable/index.js'
-import 'regenerator-runtime/runtime.js'
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import './index.css'
+import 'regenerator-runtime/runtime'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+// importing from React Router
+import { BrowserRouter } from 'react-router-dom'
+
+// import App
+import App from './App'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <BrowserRouter>
+  <App />
+  </BrowserRouter>
+)

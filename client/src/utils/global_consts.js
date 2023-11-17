@@ -21,3 +21,5 @@ export const pages=[
   }
 
 ]
+
+export const drawerWidth="240px"

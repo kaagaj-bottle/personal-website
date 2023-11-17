@@ -1,7 +1,16 @@
 import * as React from 'react'
-import { AppBar, Box, CssBaseline, Divider, Drawer,IconButton,List,ListItem,ListItemButton,ListItemText,Toolbar,Button,Avatar} from '@mui/material'
+
+// imports from mui
+import { AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Button, Avatar } from '@mui/material'
+
+// imports from mui-icon package
 import MenuIcon from '@mui/icons-material/Menu'
+
+// imports from global_consts
 import { pages, drawerWidth } from '../utils/global_consts'
+
+// imports from react router
+import { Link } from 'react-router-dom'
 
 function NavBar() {
 
@@ -12,29 +21,33 @@ function NavBar() {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      
+
       <Divider />
       <List>
         {pages.map((item) => {
+            {/* conditional assignment of link so that resume button is turned into a anchor tag which directly takes to the pdf in google drive */}
+ 
           if (item.label == 'Resume') {
             return (
               <ListItem key={item.id} disablePadding>
-              <ListItemButton 
-                  component='a' 
-                  href={item.route} 
+                <ListItemButton
+                  component='a'
+                  href={item.route}
                   sx={{ textAlign: 'center' }}
                   target='_blank'
                 >
-                <ListItemText primary={item.label} />
-
-              </ListItemButton>
-            </ListItem>)
+                  <ListItemText primary={item.label} />
+                </ListItemButton>
+              </ListItem>)
 
           }
           return (<ListItem key={item.id} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            <ListItemButton
+              sx={{ textAlign: 'center' }}
+              component={Link}
+              to={item.route}
+            >
               <ListItemText primary={item.label} />
-
             </ListItemButton>
           </ListItem>)
         })}
@@ -45,6 +58,7 @@ function NavBar() {
 
   return (
     <Box sx={{ display: 'flex' }}>
+      {/* Avatar for the top of drawer should be right here       */}
       <CssBaseline />
       <AppBar component='nav' variant='none' sx={{ position: 'sticky' }}>
         <Toolbar sx={{ bgcolor: 'rgb(256,256,256,1)' }}>
@@ -65,11 +79,27 @@ function NavBar() {
           {/* <Avatar src={CatPicture} /> */}
           {/* </Box> */}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {pages.map((item) => (
-              <Button key={item.id}>
+
+            {/* conditional assignment of link so that resume button is turned into a anchor tag which directly takes to the pdf in google drive */}
+            {pages.map((item) => {
+              if (item.label == 'Resume') {
+                return (<Button
+                  key={item.id}
+                  component='a'
+                  href={item.route}
+                  target='_blank'
+                >
+                  {item.label}
+                </Button>)
+              }
+              return (<Button
+                key={item.id}
+                component={Link}
+                to={item.route}
+              >
                 {item.label}
-              </Button>
-            ))}
+              </Button>)
+            })}
           </Box>
         </Toolbar>
       </AppBar>
