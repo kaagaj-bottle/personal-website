@@ -4,7 +4,7 @@ import React from 'react'
 import { CssBaseline } from '@mui/material'
 
 // importing from React Router
-import {Route, Routes} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 // importing pages
 import AboutPage from './pages/AboutPage'
@@ -22,7 +22,7 @@ const App = () => {
 
       <NavBar />
 
-            <Routes>
+      <Routes>
         <Route path='/' element={<AboutPage />} />
         <Route path="/articles" element={<ArticlesPage />} />
         <Route path="/contact" element={<ContactPage />} />
