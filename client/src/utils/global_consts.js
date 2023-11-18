@@ -7,7 +7,7 @@ export const pages=[
   {
   id:1,
   label:"Articles",
-  route:"articles"
+  route:"/articles"
 },
   {
   id:2,
@@ -17,7 +17,7 @@ export const pages=[
   {
     id:3,
     label:"Contact",
-    route:"contact"
+    route:"/contact"
   }
 
 ]
