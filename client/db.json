@@ -1,0 +1,39 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Lorem Ipsum",
+      "date": "2023-11-18",
+      "content": "# Lorem Ipsum\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ante id elit tempus gravida eu vitae leo. Ut vitae justo ac odio consequat dignissim. \n\n## Subheading\n\n- Integer\n- Feugiat\n- Nisl\n\nDonec convallis, libero nec aliquam posuere, ex nisl auctor urna, a scelerisque justo elit a dui.\n\n[Link Example](https://example.com)\n",
+      "title_image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "title": "Dolor Sit Amet",
+      "date": "2023-11-17",
+      "content": "# Dolor Sit Amet\nDolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.\n\n- Pellentesque\n- Suspendisse\n- Dapibus\n\nNam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.\n\n![Image Example](https://via.placeholder.com/300)",
+      "title_image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "title": "Consectetur Adipiscing Elit",
+      "date": "2023-11-16",
+      "content": "# Consectetur Adipiscing Elit\nConsectetur adipiscing elit. Sed sit amet fermentum ante. Morbi congue quam eget nisi facilisis, at dapibus ex aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi eu turpis auctor, sagittis eros in, efficitur tortor.\n\n- Fusce\n- Euismod\n- Malesuada\n\nPraesent et nisi in nisi commodo commodo. Nam eu erat nec leo luctus scelerisque.\n\n[Another Link](https://example.com/another)",
+      "title_image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 4,
+      "title": "Lorem Ipsum Dolor",
+      "date": "2023-11-15",
+      "content": "# Lorem Ipsum Dolor\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac libero eu nibh sagittis laoreet. Aenean mollis ut neque eu dapibus. Nulla auctor, libero eget interdum rhoncus, tortor risus feugiat massa.\n\n- Aliquam\n- Egestas\n- Ornare\n\nVivamus eget nunc nec est vehicula fermentum eget nec ligula. Phasellus sit amet nulla euismod, fringilla enim nec, vulputate arcu.\n",
+      "title_image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 5,
+      "title": "Sed Et Ante",
+      "date": "2023-11-14",
+      "content": "# Sed Et Ante\nSed et ante id elit tempus gravida eu vitae leo. Ut vitae justo ac odio consequat dignissim. Sed non arcu ac augue placerat varius id eget ligula.\n\n- Vestibulum\n- Facilisis\n- Rhoncus\n\nNulla facilisi. Etiam laoreet ipsum a tellus venenatis, sed varius felis consequat. Curabitur ac fermentum purus.\n\n![Another Image](https://via.placeholder.com/300)",
+      "title_image": "https://via.placeholder.com/150"
+    }
+  ]
+}
