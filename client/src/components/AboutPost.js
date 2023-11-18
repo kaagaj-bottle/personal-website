@@ -6,8 +6,6 @@ import { CssBaseline, Box } from '@mui/material'
 
 import aboutPagePicture from '../../asset/images/aboutPagePicture.png'
 
-
-
 const AboutPost = () => {
   const [aboutPost, setAboutPost] = useState('')
 
