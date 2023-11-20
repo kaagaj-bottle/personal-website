@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { Box, Container, CssBaseline } from '@mui/material'
+
 import articleService from '../services/articles'
 import ArticleCard from '../components/ArticleCard'
 
@@ -17,7 +19,17 @@ const ArticlesPage = () => {
 
 
   return (<>
-    {articles.map(article => <ArticleCard key={article.id} article={article} />)}
+    <CssBaseline />
+    <Box
+      component='div'
+      sx={{
+        display: { sm: 'flex' },
+        flexDirection: { sm: 'column' },
+        alignItems: { sm: 'center' },
+      }}
+    >
+      {articles.map(article => <ArticleCard key={article.id} article={article} />)}
+    </Box>
   </>)
 }
 
