@@ -6,6 +6,8 @@ import { CssBaseline, Box } from '@mui/material'
 
 import aboutPagePicture from '../../asset/images/aboutPagePicture.png'
 
+
+
 const AboutPost = () => {
   const [aboutPost, setAboutPost] = useState('')
 
@@ -37,6 +39,7 @@ const AboutPost = () => {
             src={aboutPagePicture} alt='my profile picture'
             sx={{
               display: 'flex',
+              alignItems: 'center',
               maxHeight: { xs: 350, sm: 200 }
             }}
           />
