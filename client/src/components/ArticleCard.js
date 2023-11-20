@@ -12,23 +12,25 @@ const ArticleCard = ({ article }) => {
 
   return (
     <>
-      <Card sx={{ 
-        maxWidth:{xs:'100%',sm:'50%'},  
-        position:'static'
+      <Card sx={{
+        maxWidth: { xs: '100%', sm: '60%' },
+        position: 'static',
+        my:'0.5rem'
+
       }}>
 
 
         <CardActionArea>
-          <Box component='div' sx={{ display: { sm:'flex' } }}>
+          <Box component='div' sx={{ display: { sm: 'flex' } }}>
             <CardMedia
               component="img"
               image={CatPicture}
               alt="green iguana"
               sx={{
-                display:'block',
-                marginLeft:'auto',
-                marginRight:'auto',
-                width:'50%'
+                display: 'block',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                width: '50%'
               }}
             />
             <CardContent>
