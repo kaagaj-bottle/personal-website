@@ -3,39 +3,52 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea, CardActions, Box } from '@mui/material';
 
 import MarkdownPost from './MarkdownPost';
 
 import CatPicture from '../../asset/images/cat.jpg'
-const ArticleCard=({article})=> {
- 
+const ArticleCard = ({ article }) => {
+
   return (
     <>
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={article.title_image} 
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {article.title}
-          </Typography>
-          {/* <Typography variant="body2" color="text.secondary"> */}
-          {/*    */}
-          {/* </Typography> */}
-        </CardContent>
-      </CardActionArea>
-      {/* <CardActions> */}
-      {/*   <Button size="small" color="primary"> */}
-      {/*     Share */}
-      {/*   </Button> */}
-      {/* </CardActions> */}
-    </Card>
-  </>
+      <Card sx={{ 
+        maxWidth:{xs:'100%',sm:'50%'},  
+        position:'static'
+      }}>
+
+
+        <CardActionArea>
+          <Box component='div' sx={{ display: { sm:'flex' } }}>
+            <CardMedia
+              component="img"
+              image={CatPicture}
+              alt="green iguana"
+              sx={{
+                display:'block',
+                marginLeft:'auto',
+                marginRight:'auto',
+                width:'50%'
+              }}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {article.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+              </Typography>
+            </CardContent>
+
+          </Box>
+        </CardActionArea>
+        {/* <CardActions> */}
+        {/*   <Button size="small" color="primary"> */}
+        {/*     Share */}
+        {/*   </Button> */}
+        {/* </CardActions> */}
+      </Card>
+    </>
   );
 }
 
