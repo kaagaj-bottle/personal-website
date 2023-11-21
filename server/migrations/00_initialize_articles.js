@@ -1,10 +1,11 @@
 const { DataTypes } = require('sequelize')
+const { Sequelize } = require('sequelize')
 module.exports = {
   up: async ({ context: queryInterface }) => {
     await queryInterface.createTable('articles', {
       id: {
         type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
+        defaultValue: Sequelize.literal('uuid_generate_v4()'),
         primaryKey: true,
       },
       title: {
@@ -25,8 +26,8 @@ module.exports = {
       },
       date: {
         type: DataTypes.DATE,
-        allowNull: false
-      }
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+      },
     })
   },
   down: async ({ context: queryInterface }) => {

@@ -5,6 +5,7 @@ const app = express();
 
 const { initiateDbConnection } = require("./utilities/helper");
 
+const articlesRouter = require('./controllers/articles')
 
 app.use(cors());
 app.use(express.json());
@@ -15,6 +16,7 @@ app.get("/", async (request, response) => {
   );
 });
 
+app.use('/api/articles', articlesRouter)
 
 initiateDbConnection();
 
