@@ -15,7 +15,7 @@ module.exports = {
         type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false,
       },
-      titleImageUrl: {
+      title_image_url: {
         type: DataTypes.TEXT,
         allowNull: true
       },
