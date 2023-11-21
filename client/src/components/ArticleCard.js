@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions, Box } from '@mui/material';
-
+import { Link } from 'react-router-dom';
 import MarkdownPost from './MarkdownPost';
 
 import CatPicture from '../../asset/images/cat.jpg'
@@ -13,18 +13,19 @@ const ArticleCard = ({ article }) => {
   return (
     <>
       <Card sx={{
-        maxWidth: { xs: '100%', sm: '60%' },
+       
         position: 'static',
         my:'0.5rem'
 
       }}>
 
 
-        <CardActionArea>
+        <CardActionArea  component={Link}
+          to={`/articles/${article.id}`} >
           <Box component='div' sx={{ display: { sm: 'flex' } }}>
             <CardMedia
               component="img"
-              image={CatPicture}
+              image={article.title_image}
               alt="green iguana"
               sx={{
                 display: 'block',

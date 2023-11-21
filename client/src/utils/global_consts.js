@@ -12,14 +12,16 @@ export const pages=[
   {
   id:2,
     label:"Resume",
-    route:"https://drive.google.com/drive/u/0/my-drive",
-  },
-  {
-    id:3,
-    label:"Contact",
-    route:"/contact"
+    route:"https://drive.google.com/file/d/1PPy60uqZajlDTWu56zC5tnTIyqDja96p/view?usp=drive_link",
   }
 
 ]
 
-export const drawerWidth="240px"
+export const drawerWidth=240
+
+export const styleObject={
+  marginLeft:{sm:`${drawerWidth-60}px`},
+  marginTop:{sm:'2rem'},
+
+  
+}
