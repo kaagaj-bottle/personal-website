@@ -7,13 +7,16 @@ import { drawerWidth, styleObject } from '../utils/global_consts'
 
 const MarkdownPost=({article})=>{
   
- /*  article.content="#This is a header file" */
+  const [content,setContent]=useState('')
+  useEffect(()=>{
+    setContent(article.content)
+  })
    
   return (
   <><Box sx={{
       marginLeft:{sm:`${drawerWidth}px`}
     }}>
-      <Markdown>{article.content}</Markdown>
+      <Markdown>{content}</Markdown>
     </Box>
 
     </>
