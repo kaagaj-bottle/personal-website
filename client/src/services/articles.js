@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:3001/articles'
+const baseUrl = 'http://localhost:4001/api/articles'
 
 const getAll = async () => {
   const response = await axios.get(baseUrl)
@@ -8,7 +8,10 @@ const getAll = async () => {
 
 const getOne = async (id) => {
   const response = await axios.get(`${baseUrl}/${id}`)
-  return response.data
+  {
+    console.log(response.headers)
+    return response.data
+  }
 }
 
 export default { getAll, getOne }

@@ -25,7 +25,7 @@ const ArticleCard = ({ article }) => {
           <Box component='div' sx={{ display: { sm: 'flex' } }}>
             <CardMedia
               component="img"
-              image={article.title_image}
+              image={article.titleImageUrl}
               alt="green iguana"
               sx={{
                 display: 'block',

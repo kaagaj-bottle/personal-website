@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 // importing from mui
 import { CssBaseline } from '@mui/material'
 
@@ -20,17 +20,18 @@ const App = () => {
   const [articles, setArticles] = useState([])
 
   useEffect(() => {
-    articleService.getAll()
+    articleService
+      .getAll()
       .then(articles => {
         setArticles(articles)
+
       })
       .catch(err => logger.error(err))
   }, [])
 
-
   const match = useMatch('/articles/:id')
   const article = match
-    ? articles.find(article => article.id === Number(match.params.id))
+    ? articles.find(article => article.id === match.params.id)
     : null
   return (
     <>
@@ -40,8 +41,8 @@ const App = () => {
 
       <Routes>
         <Route path='/' element={<AboutPage />} />
-        <Route path='/articles' element={<ArticlesPage articles={articles}/>} />
-        <Route path='/articles/:id' element={<MarkdownPost article={article} />} />
+        <Route path='/articles' element={<ArticlesPage articles={articles} />} />
+        *  <Route path='/articles/:id' element={<MarkdownPost article={article} />} />
       </Routes>
     </>
   )

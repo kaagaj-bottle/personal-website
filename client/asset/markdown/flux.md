@@ -24,7 +24,7 @@ const counterReducer = (state, action) => {
 
 ```
 For further simplifying the code for action, we can use a function creating an action called an action creator:
-```
+JavaScript```
 const createNote = (content) => {
   return {
     type: 'NEW_NOTE',
